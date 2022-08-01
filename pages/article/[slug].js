@@ -27,7 +27,9 @@ const Article = ({ article, categories }) => {
                 <NextImage image={article.attributes.image} />
                 <div className="uk-section">
                     <div className="uk-container uk-container-small">
-                        <ReactMarkdown children={article.attributes.content} />
+                        <ReactMarkdown>
+                            {article.attributes.content}
+                        </ReactMarkdown>
                         <hr className="uk-divider-small" />
                         <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
                             <div>
